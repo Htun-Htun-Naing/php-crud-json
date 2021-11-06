@@ -23,8 +23,13 @@ if(!$user){
     <div class="card-header">
     <h3>View Users: <b><?php echo $user['name']; ?></b></h3>
     <a href="update.php?id=<?php echo $user['id'] ;?>" class="btn btn-sm btn-outline-secondary">Update</a>
-    <a href="delete.php?id=<?php echo $user['id'] ;?>" class="btn btn-sm btn-outline-danger">Delete</a>
-    </div>
+    <form style="display:inline-block" action="delete.php" method="POST">
+                            <button class="btn btn-sm btn-outline-danger">
+                                <input type="hidden" name="id" value="<?php echo $user['id'] ?>">
+                            delete
+                            </button>
+                        </form>
+</div>
     <table class="table">
     <tbody>
         <tr>
