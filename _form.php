@@ -16,20 +16,32 @@
     <form method="POST" enctype="multipart/form-data"  action="">
   <div class="mb-3">
     <label for="name" class="form-label">Name</label>
-    <input name="name" class="form-control form-control-sm" id="name" value="<?php echo $user['name'] ?>">
+    <input name="name" class="form-control form-control-sm <?php echo $errors['name'] ? 'is-invalid' : '' ?> id="name" value="<?php echo $user['name'] ?>">
+    <div class="invalid-feedback">
+          <?php echo $errors['name'] ?>
+    </div>
     
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Username</label>
-    <input name="username" class="form-control form-control-sm" value="<?php echo $user['username'] ?>">
+    <input name="username" class="form-control form-control-sm <?php echo $errors['username'] ? 'is-invalid' : '' ?>" value="<?php echo $user['username'] ?>">
+        <div class="invalid-feedback">
+          <?php echo $errors['username'] ?>
+        </div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">email</label>
-    <input name="email" class="form-control form-control-sm" value="<?php echo $user['email'] ?>">
+    <input name="email" class="form-control form-control-sm <?php echo $errors['email'] ? 'is-invalid' : '' ?>" value="<?php echo $user['email'] ?>">
+    <div class="invalid-feedback">
+          <?php echo $errors['email'] ?>
+        </div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Phone</label>
-    <input name="phone" class="form-control form-control-sm" value="<?php echo $user['phone'] ?>">
+    <input name="phone" class="form-control form-control-sm <?php echo $errors['phone'] ? 'is-invalid' : '' ?>" value="<?php echo $user['phone'] ?>">
+    <div class="invalid-feedback">
+          <?php echo $errors['phone'] ?>
+        </div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Website</label>
